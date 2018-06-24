@@ -1,5 +1,6 @@
 export default function reducer(state = {
   token: null,
+  showLogin: false,
   isLoggedIn: false,
   fetching: false,
   fetched: false,
@@ -10,15 +11,16 @@ export default function reducer(state = {
       return { ...state, fetching: true, isLoggedIn: false }
     }
     case 'LOGIN_REJECTED': {
-      return { ...state, fetching: false, fetched: false, isLoggedIn: false, error: action.payload }
+      return { ...state, fetching: false, fetched: false, isLoggedIn: false, error: action.payload.response.data }
     }
     case 'LOGIN_FULFILLED': {
       return {
         ...state,
         fetching: false,
         fetched: true,
-        token: action.payload,
+        token: action.payload.data.token,
         isLoggedIn: true,
+        showLogin: false,
       }
     }
     default: { return { ...state } }

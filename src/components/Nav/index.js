@@ -4,7 +4,21 @@ import { connect } from 'react-redux'
 import { Link } from 'react-router-dom'
 import { userActions } from '../../actions'
 
+import * as JWT from '../../utils/JWTService'
+
 class Nav extends Component {
+  componentWillMount() {
+    this.props.dispatch(userActions.login('tsmith3480@yahoo.com', 'test123'))
+  }
+
+  buttonClick() {
+    //console.log('Hi')
+    JWT.decodeToken(this.props.user.token, (err, userDeets) => {
+      if (!err) console.log(userDeets) 
+      else console.log(err)
+    })
+  }
+
   render() {
     return (
       <nav className='navbar navbar-default'>
@@ -20,7 +34,7 @@ class Nav extends Component {
           </li>
         </ul>
         <ul className='nav navbar-nav navbar-right'>
-          <button className='btn btn-info log'>Log In</button>
+          <button className='btn btn-info log' onClick={() => this.buttonClick()}>Log In</button>
         </ul>
       </nav>
     )

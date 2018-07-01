@@ -26,9 +26,7 @@ class Nav extends Component {
         <div className='container-fluid'>
         <div className='navbar-header'>
           <button type='button' className='navbar-toggle' data-toggle='collapse' data-target='#mainNav'>
-            <span className='icon-bar' />
-            <span className='icon-bar' />
-            <span className='icon-bar' />
+            <span className='glyphicon glyphicon-menu-hamburger' />
           </button>
           {<Link className='navbar-brand' to='/'>EM Syndicate</Link>}
         </div>

@@ -1,26 +1,26 @@
 import React, { Component } from 'react'
 import './App.css'
 import { BrowserRouter, Route, Switch, Redirect } from 'react-router-dom'
-import { Home, OpenBets, BetHistory } from './screens'
+import { Home, Betting, EvenMoney } from './screens'
 import { Layout } from './components'
-
-import { Provider } from 'react-redux'
-import store from './store'
+import { CookiesProvider } from 'react-cookie'
 
 class App extends Component {
   render() {
     return (
-      <Provider store={store}>
+      <CookiesProvider>
         <BrowserRouter>
           <Layout>
             <Switch>
               <Route exact path='/' component={Home} />
-              <Route exact path='/openBets' component={OpenBets} />
-              <Route exact path='/betHistory' component={BetHistory} />
+              <Route exact path='/betting' component={Betting.Home} />
+              <Route exact path='/betting/current' component={Betting.Current} />
+              <Route exact path='/betting/history' component={Betting.History} />
+              <Route exact path='/evenmoney' component={EvenMoney} />
             </Switch>
           </Layout>
         </BrowserRouter>
-      </Provider>
+      </CookiesProvider>
     );
   }
 }

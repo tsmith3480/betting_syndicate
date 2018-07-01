@@ -1,9 +1,9 @@
 import Home from './Home'
-import BetHistory from './BetHistory'
-import OpenBets from './OpenBets'
+import * as Betting from './Betting'
+import EvenMoney from './EvenMoney'
 
 export {
   Home,
-  OpenBets,
-  BetHistory,
+  Betting,
+  EvenMoney,
 }

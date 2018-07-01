@@ -2,11 +2,11 @@ import React, { Component } from 'react'
 import './style.css'
 import { connect } from 'react-redux'
 
-class BetHistory extends Component {
+class BetHome extends Component {
   render() {
     return (
       <div>
-        <h1>Bet History</h1>
+        <h1>Betting Home</h1>
       </div>
     )
   }
@@ -14,4 +14,4 @@ class BetHistory extends Component {
 
 export default connect(store => {
   return { user: store.user }
-})(BetHistory);
+})(BetHome);

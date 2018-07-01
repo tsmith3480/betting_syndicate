@@ -1,0 +1,11 @@
+.header-img {
+  height: 10em;
+  overflow: hidden;
+  filter: grayscale(100%)
+}
+
+.header-img img {
+  position: relative;
+  top: -130px;
+  width: 2000px;
+}

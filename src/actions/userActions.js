@@ -7,15 +7,20 @@ const _URL = {
   dev: 'http://dev-webesb-02-45svx0qg.cloudapp.net:30000'
 }
 
-export function login(username, password) {
-  return {
-    type: 'LOGIN',
-    payload: axios.post(`${_URL.local}/login`, { UserName: username, Password: password })
-      .then(response => {
-        const { token } = response
-        sessionService.saveSession({ token })
-          .then(() => { sessionService.saveUser(JWT.getUserInfo(response.data.token))})
-        return response
-      })
-  }
-}
+export const login = (username, password) => ({
+  type: 'LOGIN',
+  payload: axios.post(`${_URL.dev}/login`, { UserName: username, Password: password })
+    .then(response => {
+      const { token } = response
+      sessionService.saveSession({ token })
+        .then(() => { sessionService.saveUser(JWT.getUserInfo(response.data.token)) })
+      return response
+    })
+})
+
+export const logout = () => ({
+  type: 'LOGOUT',
+  payload: sessionService.deleteUser().then(() => {
+    sessionService.deleteSession()
+  })
+})

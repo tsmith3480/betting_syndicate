@@ -1,13 +1,14 @@
 import React, { Component } from 'react'
 import './style.css'
+import PropTypes from 'prop-types'
 import { Link } from 'react-router-dom'
 import $ from 'jquery'
 
-export default class BetNav extends Component {
+export default class AcctNav extends Component {
   componentDidMount() {
-    $('ul.nav li.dropdown').hover(function() {
+    $('ul.nav li.dropdown').hover(function () {
       $(this).find('.dropdown-menu').stop(true, true).delay(50).fadeIn(250)
-    }, function() {
+    }, function () {
       $(this).find('.dropdown-menu').stop(true, true).delay(50).fadeOut(250)
     })
 
@@ -18,15 +19,24 @@ export default class BetNav extends Component {
   }
 
   render() {
+    const { name, logout } = this.props
+    
     return (
       <li className='dropdown'>
-        <span className='navbar-item'>Betting<b className='caret' /></span>
-        {/*<Link to='/betting'>Betting<b className='caret' /></Link>*/}
+        <a>
+          <span className='glyphicon glyphicon-user' />{name}
+        </a>
         <ul className='dropdown-menu'>
-          <li className='dd-item'><Link to='/betting/current'>Current</Link></li>
-          <li className='dd-item'><Link to='/betting/history'>History</Link></li>
+          <li className='dd-item'><Link to='/' onClick={logout}>Logout</Link></li>
         </ul>
       </li>
     )
   }
+}
+
+const { string, func } = PropTypes
+
+AcctNav.propTypes = {
+  name: string.isRequired,
+  logout: func.isRequired,
 }

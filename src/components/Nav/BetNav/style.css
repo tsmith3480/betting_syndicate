@@ -1,0 +1,17 @@
+.navbar-item {
+  color: #777;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  line-height: 20px;
+  text-shadow: 0 1px 0 rgba(255,255,255,.25);
+  position: relative;
+  display: block;
+  padding: 10px 15px;
+  background-color: transparent;
+}
+
+@media (min-width: 768px) {
+.navbar-item {
+  padding-top: 15px;
+  padding-bottom: 15px;
+}}

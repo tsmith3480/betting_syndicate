@@ -1,0 +1,16 @@
+#layout {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  background-attachment: fixed;
+  color: white;
+  font-family: Candara, Calibri, Segoe, "Segoe UI", Optima, Arial, sans-serif; ;
+}
+
+#layout .container {
+  background-color: rgba(3,17,40,.95);
+  min-height: 900px;
+  border-left: white solid 1px;
+  border-right: white solid 1px;
+}

@@ -18,9 +18,17 @@ export const login = (username, password) => ({
     })
 })
 
+export const showLogin = () => ({
+  type: 'SHOW_LOGIN'
+})
+
+export const closeLogin = () => ({
+  type: 'CLOSE_LOGIN'
+})
+
 export const logout = () => ({
-  type: 'LOGOUT',
-  payload: sessionService.deleteUser().then(() => {
-    sessionService.deleteSession()
-  })
+  type: 'USER_LOGOUT',
+  //payload: sessionService.deleteUser().then(() => {
+  //  sessionService.deleteSession()
+  //})
 })

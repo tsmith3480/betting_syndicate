@@ -7,6 +7,18 @@ export default function reducer(state = {
   error: null,
 }, action) {
   switch (action.type) {
+    case 'SHOW_LOGIN': {
+      return {
+        ...state,
+        showLogin: true,
+      }
+    }
+    case 'CLOSE_LOGIN': {
+      return {
+        ...state,
+        showLogin: false
+      }
+    }
     case 'LOGIN_PENDING': {
       return { ...state, 
         fetching: true, 

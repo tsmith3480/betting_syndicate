@@ -28,27 +28,17 @@ class Nav extends Component {
     this.props.dispatch(userActions.logout())
   }
 
-  showLogin = () => {
-    this.setState({
-      showLogin: true,
-    })
-  }
-
-  closeLogin = () => {
-    this.setState({
-      showLogin: false,
-    })
-  }
-
-  loginClick = () => {
-    this.props.dispatch(userActions.login('tsmith3480@yahoo.com', 'test123'))
+  loginClick = (e) => {
+    e.preventDefault()
+    const { username, password } = e.target
+    this.props.dispatch(userActions.login(username.value, password.value))
   }
 
   render() {
-    const { user, authenticated, checked, invalid } = this.props
+    const { user, authenticated, checked, invalid, showLogin } = this.props
     const Login = () => (
       <li>
-        <Link to='/' onClick={this.showLogin}>
+        <Link to='/' onClick={() => this.props.dispatch(userActions.showLogin())}>
           <span className='glyphicon glyphicon-user' />
           Login
         </Link>
@@ -71,22 +61,28 @@ class Nav extends Component {
                 <Link to='/evenmoney'>Even Money</Link>
               </li>
             </ul>
-            <ul className='nav navbar-nav navbar-right'>
+            <ul className='nav navbar-nav navbar-right' >
               {(authenticated && checked && !invalid)
-                ? <AcctNav name={user.name || 'Login'} logout={this.logoutClick} />
+                ? <AcctNav name={user.name || 'Login'} logout={this.logoutClick}/>
                 : <Login />}
             </ul>
           </div>
         </div>
-        <Modal type='login' isOpen={this.state.showLogin} closeModal={this.closeLogin}>
+        <Modal type='login' isOpen={showLogin} closeModal={() => this.props.dispatch(userActions.closeLogin())}>
           <div className='card card-container'>
-          <p id='profile-name' className='profile-name-card'>EM Syndicate Login</p>
-          <form className='form-signin'>
-            <span id='reauth-email' className='reauth-email' />
-            <input type='text' className='form-control' placeholder='Username' required autoFocus />
-            <input type='password' className='form-control' placeholder='Password' required />
-            <input className='btn btn-primary btn-block' type='button' value='Login' onClick={this.loginClick} />
-          </form>
+            <p id='profile-name' className='profile-name-card'>EM Syndicate Login</p>
+            <form className='form-signin' onSubmit={this.loginClick}>
+              <span id='reauth-email' className='reauth-email' />
+              <div className='form-group'>
+                <input id='username' type='text' className='form-control' placeholder='Username' required autoFocus />
+              </div>
+              <div className='form-group'>
+                <input id='password' type='password' className='form-control' placeholder='Password' required />
+              </div>
+              <div className='form-group'>
+                <input className='btn btn-primary btn-block' type='submit' value='Login' />
+              </div>
+            </form>
           </div>
         </Modal>
       </nav>
@@ -94,7 +90,8 @@ class Nav extends Component {
   }
 }
 
-const mapState = ({ session }) => ({
+const mapState = ({ session, user }) => ({
+  showLogin: user.showLogin,
   user: session.user,
   authenticated: session.authenticated,
   checked: session.checked,

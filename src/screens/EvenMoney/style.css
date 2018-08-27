@@ -22,6 +22,8 @@
 }
 
 #even-money-page .bb-item .icon {
+  display: inline-block;
+  vertical-align: bottom;
   margin: 0 15px 0 0;
 }
 

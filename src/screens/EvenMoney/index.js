@@ -37,7 +37,7 @@ class EvenMoney extends Component {
                   <li className={item.elem === String.fromCharCode(160) || i === 0
                     ? 'bb-item-none'
                     : 'bb-item'} key={i}>
-                    <span className='icon'><Icons icon='ios-american-football-outline' fontSize='32px' color='white' /></span>
+                    <span className='icon'><Icons icon='ios-american-football' fontSize='32px' color='white' /></span>
                     <span className='text'>{item.elem}</span>
                   </li>)) :
                 <Loader type='ThreeDots'
@@ -48,7 +48,8 @@ class EvenMoney extends Component {
           </div>
           <div className='col-md-5'>
             <h2>Hear it now!</h2>
-            <iframe sandbox="allow-same-origin allow-scripts allow-top-navigation allow-popups"
+            <iframe title='Even Money Podcast'
+              sandbox="allow-same-origin allow-scripts allow-top-navigation allow-popups"
               scrolling='no'
               width="100%"
               height="185"

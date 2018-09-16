@@ -11,7 +11,13 @@
 
 #layout .container {
   background-color: rgba(3,17,40,0.97);
-  min-height: 900px;
+  min-height: 500px;
   border-left: white solid 1px;
   border-right: white solid 1px;
+}
+
+@media only screen and (max-width: 767px) {
+  #layout .header-img {
+    display: none;
+  }
 }

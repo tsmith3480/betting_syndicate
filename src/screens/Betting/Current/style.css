@@ -1,0 +1,79 @@
+#betting-current-page .ReactTable {
+  background-color: rgba(0,0,0,.5);
+  color: white;
+  margin: 20px;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+#betting-current-page .ReactTable .-pageJump, #betting-current-page .ReactTable .-pageSizeOptions {
+  color: black;
+}
+
+#betting-current-page .rt-table .money::before {
+  content: '$';
+}
+
+#betting-current-page .rt-table .bet-details {
+  position: absolute;
+  display: block;
+  width: 40px;
+}
+
+#betting-current-page .rt-table .bet-details .bet-label,
+#betting-current-page .rt-table .bet-details .bet-date{
+  display: inline-block;
+}
+
+#betting-current-page .rt-table .bet-details .bet-label {
+  width: 25%;
+  font-weight: bolder;
+}
+
+#betting-current-page .rt-table .bet-details .bet-date{
+  width: 75%;
+}
+
+#betting-current-page .rt-table .bet-details-hover {
+  display: none;
+  position: absolute;
+  top: -5px;
+  left: 40px;
+  min-width: 400px;
+  min-height: 400px;
+  background-color: white;
+  border: outset black 1px;
+  border-radius: 0px 15px 15px 15px;
+  color: black;
+  padding: 10px 25px;
+  z-index: 1;
+}
+
+#betting-current-page .rt-table input[type=text] {
+  color: black;
+}
+
+#betting-current-page .rt-table .bet-details-hover::after {
+  content: " ";
+  position: absolute;
+  top: 0; /* At the bottom of the tooltip */
+  left: 0;
+  margin-left: -30px;
+  border-width: 15px;
+  border-style: solid;
+  border-color: transparent white transparent transparent;
+}
+
+#betting-current-page .rt-table .bet-week:hover .bet-details-hover {
+  display: block;
+}
+
+#betting-current-page .rt-table .nfl-week {
+  display: block;
+  width: 10px;
+  margin: 0 auto;
+}
+
+#betting-current-page .rt-table .align-right {
+  text-align: right;
+}

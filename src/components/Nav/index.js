@@ -60,6 +60,9 @@ class Nav extends Component {
               <li>
                 <Link to='/evenmoney'>Even Money</Link>
               </li>
+              <li>
+                <Link to='/odds'>Odds</Link>
+              </li>
             </ul>
             <ul className='nav navbar-nav navbar-right' >
               {(authenticated && checked && !invalid)

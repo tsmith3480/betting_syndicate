@@ -46,15 +46,11 @@ class EvenMoney extends Component {
                   width='80' />}
             </ul>
           </div>
-          <div className='col-md-5'>
-            <h2>Hear it now!</h2>
-            <iframe title='Even Money Podcast'
-              sandbox="allow-same-origin allow-scripts allow-top-navigation allow-popups"
-              scrolling='no'
-              width="100%"
-              height="185"
-              frameBorder="0"
-              src="https://embed.radiopublic.com/e?if=even-money-G2aJDR" />
+          <div className='col-md-5 podcast-player'>
+            <iframe src='http://www.podcastone.com/widget?progID=660&ad=false'
+              id='even-money-podcast'
+              width="100%" height="600"
+              frameBorder="0" />
           </div>
         </div>
         {/*<div dangerouslySetInnerHTML={this.createMarkup()}>

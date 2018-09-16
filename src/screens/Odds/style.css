@@ -1,0 +1,271 @@
+/* TopBet Styles */
+#odds-page .table-container .game-heading {
+  background: #70d00e;
+  background: -moz-linear-gradient(-45deg, #70d00e 0%, #cfdc05 100%);
+  background: -webkit-linear-gradient(-45deg, #70d00e 0%, #cfdc05 100%);
+  background: linear-gradient(135deg, #70d00e 0%, #cfdc05 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#70d00e', endColorstr='#cfdc05',GradientType=1 );
+  font-weight: bold;
+  padding: 5px 19px;
+  color: #000;
+  display: inline-block;
+  border-top-right-radius: 15px;
+  min-width: 125px; }
+  #odds-page .table-container .game-heading h2 {
+    font-size: 14px !important;
+    font-weight: bold;
+    margin: 0;
+    padding: 3px 0; }
+#odds-page .table-container .view-all a {
+  cursor: pointer;
+  font-size: 12px;
+  color: #000000;
+  font-weight: bold;
+  position: relative;
+  top: 7px;
+  left: -4px; }
+#odds-page .table-container .view-all a > i {
+  font-size: 16px;
+  margin-left: 5px; }
+#odds-page .table-container .header-row {
+  background-color: #e2e2e2;
+  border: 1px solid #e2e2e2; }
+#odds-page .table-container .gamelines-event {
+  position: relative; }
+  #odds-page .table-container .gamelines-event .gamelines-subevent {
+    background-color: black;
+    font-weight: bold;
+    font-size: 12px;
+    padding: 3px 22px;}
+    #odds-page .table-container .gamelines-event .gamelines-subevent .gamelines-event-time {
+      float: right; }
+    #odds-page .table-container .gamelines-event .gamelines-subevent .gamelines-event-title {
+      float: left; }
+      #odds-page .table-container .gamelines-event .gamelines-subevent .gamelines-event-title h3 {
+        font-size: 12px !important;
+        font-weight: bold;
+        margin: 0;
+        padding: 3px 0; }
+  #odds-page .table-container .gamelines-event .gamelines-details {
+    border-left: 1px solid #e2e2e2;
+    border-bottom: 1px solid #e2e2e2;
+    border-right: 1px solid #e2e2e2; }
+    #odds-page .table-container .gamelines-event .gamelines-details .matchoverunder-events, #odds-page .table-container .gamelines-event .gamelines-details .gamelines-team-div {
+      float: right;
+      width: 76%; }
+      #odds-page .table-container .gamelines-event .gamelines-details .matchoverunder-events .gamelines-team, #odds-page .table-container .gamelines-event .gamelines-details .gamelines-team-div .gamelines-team {
+        width: 100%; }
+    #odds-page .table-container .gamelines-event .gamelines-details .gamelines-team {
+      float: right;
+      width: 76%;
+      min-height: 45px;
+      border-bottom: 1px solid #e2e2e2;
+      border-right: 1px solid #ccc; }
+      #odds-page .table-container .gamelines-event .gamelines-details .gamelines-team .gamelines-matchup {
+        border-left: 1px solid #e2e2e2; }
+        #odds-page .table-container .gamelines-event .gamelines-details .gamelines-team .gamelines-matchup .gamelines-vs {
+          float: left;
+          padding: 30px 15px; }
+          #odds-page .table-container .gamelines-event .gamelines-details .gamelines-team .gamelines-matchup .gamelines-vs img {
+            width: 25px;
+            height: 25px; }
+      #odds-page .table-container .gamelines-event .gamelines-details .gamelines-team .assoc.gamelines-matchup {
+        margin-top: -20px;
+        margin-bottom: 40px; }
+        #odds-page .table-container .gamelines-event .gamelines-details .gamelines-team .assoc.gamelines-matchup .column.team {
+          width: 44% !important; }
+    #odds-page .table-container .gamelines-event .gamelines-details .hotInfo {
+      position: absolute;
+      top: 0px;
+      left: 4px; }
+      #odds-page .table-container .gamelines-event .gamelines-details .hotInfo a {
+        cursor: pointer; }
+      #odds-page .table-container .gamelines-event .gamelines-details .hotInfo img {
+        display: none;
+        height: 23px; }
+    #odds-page .table-container .gamelines-event .gamelines-details .gamelines-event-title.props {
+      font-size: 13px;
+      font-weight: 600;
+      background: #e2e2e2;
+      padding: 1px 8px; }
+  #odds-page .table-container .gamelines-event .column.time {
+    font-size: 12px;
+    padding-top: 20px;
+    min-height: 90px;
+    float: left;
+    width: 14%; }
+  #odds-page .table-container .gamelines-event .column.seemore {
+    float: right;
+    width: 10%;
+    min-height: 90px;
+    padding: 5px 4px; }
+    #odds-page .table-container .gamelines-event .column.seemore .btn-seemore {
+      background-color: #edf600;
+      width: 100%;
+      padding: 6px 0px;
+      border-radius: 7px;
+      border: 1px solid #ccc;
+      display: block;
+      color: #000;
+      position: relative;
+      font-size: 10px; }
+    #odds-page .table-container .gamelines-event .column.seemore .btn-seemore.disabled {
+      cursor: not-allowed;
+      background-color: #ccc;
+      width: 100%;
+      padding: 10px 0px;
+      border-radius: 7px;
+      border: 1px solid #ccc;
+      display: block;
+      color: #000;
+      position: relative;
+      z-index: 10; }
+    #odds-page .table-container .gamelines-event .column.seemore .btn-seemore:hover {
+      text-decoration: none; }
+    #odds-page .table-container .gamelines-event .column.seemore .more-bets-number {
+      border-radius: 50%;
+      line-height: 22px;
+      width: 22px;
+      background-color: #000000;
+      color: #ffffff;
+      display: inline-block;
+      font-size: 10px; }
+  #odds-page .table-container .gamelines-event .column.team {
+    padding: 12px 30px;
+    font-size: 14px;
+    border-left: 1px solid #e2e2e2; }
+    #odds-page .table-container .gamelines-event .column.team .hotInfo {
+      position: absolute;
+      top: 0px;
+      left: 4px; }
+      #odds-page .table-container .gamelines-event .column.team .hotInfo a {
+        cursor: pointer; }
+      #odds-page .table-container .gamelines-event .column.team .hotInfo img {
+        height: 23px; }
+  #odds-page .table-container .gamelines-event .column {
+    vertical-align: middle;
+    width: 110px;
+    padding: 0px; }
+    #odds-page .table-container .gamelines-event .column .bet-wrapper {
+      width: 100%;
+      display: inline-block;
+      color: #afadad;
+      border: 1px solid #ccc;
+      border-radius: 7px;
+      height: 35px;
+      padding: 2px; }
+      #odds-page .table-container .gamelines-event .column .bet-wrapper span {
+        font-size: 10px;
+        font-weight: bold;
+        display: block; }
+    #odds-page .table-container .gamelines-event .column .bet-wrapper.single-line {
+      padding-top: 10px; }
+    #odds-page .table-container .gamelines-event .column .bet-wrapper:hover, #odds-page .table-container .gamelines-event .column .bet-wrapper:active, #odds-page .table-container .gamelines-event .column .bet-wrapper:focus {
+      text-decoration: none; }
+    #odds-page .table-container .gamelines-event .column .bet-wrapper.disabled {
+      background-color: #dedede;
+      cursor: auto; }
+    #odds-page .table-container .gamelines-event .column .bet-wrapper.btn-money {
+      background-color: forestgreen;
+      color: black; }
+    #odds-page .table-container .gamelines-event .column .bet-wrapper.btn-spread {
+      background-color: forestgreen;
+      color: black; }
+    #odds-page .table-container .gamelines-event .column .bet-wrapper.btn-total {
+      background-color: forestgreen;
+      color: black; }
+#odds-page .table-container .column {
+  display: inline-block;
+  padding: 5px 10px;
+  font-size: 11px;
+  font-weight: bold;
+  text-transform: capitalize;
+  width: 110px;
+  text-align: center; }
+#odds-page .table-container .gamelines-header-details {
+  width: 76%;
+  float: right; }
+#odds-page .table-container .column.time {
+  width: 14%; }
+#odds-page .table-container .column.team {
+  width: calc(100% - 350px);
+  text-align: left;
+  padding-left: 30px; }
+#odds-page .table-container .column.seemore {
+  width: 10%;
+  float: right; }
+#odds-page .table-container .hotinfo-container {
+  display: none; }
+#odds-page .table-container .dateInMobile {
+  display: none;
+  float: right;
+  margin-left: 5px; }
+#odds-page p.no-event {
+text-align: center;
+padding: 10px;
+font-size: 15px;
+font-weight: 900; }
+#odds-page .relatedLeagues {
+margin-bottom: 20px; }
+#odds-page .relatedLeagues .leaguesImage {
+  display: none;
+  background-size: 100% 100%;
+  height: auto;
+  padding: 125px 20px;
+  margin-bottom: 5px; }
+#odds-page .relatedLeagues .leaguesImage2 {
+  display: none;
+  background-size: 100% 100%;
+  height: auto;
+  padding: 40px 20px;
+  margin-bottom: 5px; }
+#odds-page .relatedLeagues h3 {
+  color: #ffe800; }
+#odds-page .relatedLeagues h4 {
+  color: #fff; }
+#odds-page .relatedLeagues h5 {
+  font-weight: 700;
+  margin: 15px auto;
+  width: 170px; }
+#odds-page .relatedLeagues .hidden-md {
+  text-align: center; }
+  #odds-page .relatedLeagues .hidden-md h3 {
+    color: #ffe800; }
+  #odds-page .relatedLeagues .hidden-md h4 {
+    color: #fff;
+    font-size: 15px; }
+#odds-page .relatedLeagues .col-lg-6 {
+  padding: 0px 0px 10px 0px; }
+  #odds-page .relatedLeagues .col-lg-6 .leaguesHeader {
+    background: #ececec;
+    padding: 1px 0px; }
+@media (min-width: 1200px) {
+  #odds-page .relatedLeagues .col-lg-6:first-of-type {
+    border-right: 2px solid #ffffff; } }
+#odds-page .relatedLeagues ul {
+  margin: 10px auto;
+  width: 285px; }
+  #odds-page .relatedLeagues ul li {
+    margin-bottom: 5px; }
+    #odds-page .relatedLeagues ul li a {
+      color: #54a20b; }
+    #odds-page .relatedLeagues ul li a:hover {
+      text-decoration: underline; }
+#odds-page .relatedLeagues .no-rec {
+  text-align: center;
+  padding-top: 10px; }
+/**Custom**/
+#odds-page .table-container .game-heading, #odds-page .header-row, #odds-page iframe, #odds-page .gamelines-details .column.seemore {
+  display: none;
+}
+/*#odds-page .gamelines-team-div .gamelines-team span .column {
+  max-width: 62px;
+}*/
+#odds-page .gamelines-team-div .gamelines-team .column.team {
+  min-width: 140px;
+}
+/* End TopBet Styles */
+
+/* BetDSI Styles */
+
+/* End BetDSI Styles */

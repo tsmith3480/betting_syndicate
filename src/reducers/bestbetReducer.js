@@ -15,7 +15,7 @@ export default function reducer(state = {
       return { ...state, 
         fetching: false, 
         fetched: false, 
-        error: action.payload.response.data 
+        error: action.payload,
       }
     }
     case 'FETCH_BESTBETS_FULFILLED': {

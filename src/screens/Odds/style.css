@@ -269,3 +269,16 @@ margin-bottom: 20px; }
 /* BetDSI Styles */
 
 /* End BetDSI Styles */
+
+/* Loader Styles */
+#odds-page .loader {
+  width: 80px;
+  height: 80px;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+/* End Loader Styles*/
